@@ -11,7 +11,7 @@ RUN apt-get update \
 apt-get purge && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN Rscript -e "install.packages(c('rmarkdown', 'markdown', 'tidyverse', 'sjlabelled', 'haven', 'magrittr', 'dplyr', 'psych'));"
+RUN Rscript -e "install.packages(c('rmarkdown', 'markdown', 'tidyverse', 'sjlabelled', 'haven', 'magrittr', 'dplyr', 'psych', 'knitr', 'ggthemes'));"
 
 #COPY user-settings /home/rstudio/.rstudio/monitored/user-settings/user-settings
 #COPY .Rprofile /home/rstudio/
